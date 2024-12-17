@@ -1,0 +1,216 @@
+body {
+    background-color: #000000;
+    color: #627CFC;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.container {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    display: none;
+}
+
+.input-container {
+    display: block;
+}
+
+h2,
+p {
+    margin: 0 0 10px;
+}
+
+.highlight {
+    color: #627CFC;
+    font-size: 1.5em;
+}
+
+.warning {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #111;
+    color: #fff;
+}
+
+/* 增大會員帳號輸入框的文字大小和輸入框尺寸 */
+#accountInput,
+#deviceIPInput,
+#gameSelect,
+#roomNumberInput {
+    font-size: 1.3em;
+    /* 調整為稍小的文字大小 */
+    padding: 12px;
+    /* 增加內邊距，使輸入框看起來更適中 */
+    height: auto;
+    /* 讓高度根據內容自動調整 */
+}
+
+/* 若需要調整選擇框和其他輸入框一致性 */
+select {
+    font-size: 1.3em;
+    /* 調整選擇框文字大小 */
+    padding: 12px;
+    /* 增加選擇框的內邊距 */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #627CFC;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #627CFC;
+    border: none;;
+}
+
+#registerButton {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#winnerMessages {
+    background-color: #000;
+    color: #627CFC;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #627CFC;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+#resetButton:hover {
+    background-color: #627CFC;
+}
+
+#codeBox {
+    display: none;
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family: monospace;
+    text-align: left;
+    height: 400px;
+    overflow-y: auto;
+}
+
+#progressContainer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#progressBar {
+    width: 0;
+    height: 20px;
+    background-color: #627CFC;
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+#progressText {
+    color: #627CFC;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .container,
+    #codeBox {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* 添加七彩閃爍的動畫 */
+@keyframes rainbowFlashing {
+    0% {
+        color: red;
+    }
+
+    16.7% {
+        color: orange;
+    }
+
+    33.4% {
+        color: yellow;
+    }
+
+    50.1% {
+        color: green;
+    }
+
+    66.8% {
+        color: blue;
+    }
+
+    83.5% {
+        color: indigo;
+    }
+
+    100% {
+        color: violet;
+    }
+}
+
+#warningText {
+    animation: rainbowFlashing 2s linear infinite;
+}
+
+#optimizationMessage {
+    background-color: #000;
+    color: #627CFC;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    display: none;
+}.bg {
+    background-attachment: fixed;
+    background-image: url(../bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
