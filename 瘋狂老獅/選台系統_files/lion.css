@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("../text.ttf") format("truetype");
+}
+
+body {
+    background-image: url('../new_bg.png');
+    background-color: #000000; /* 保留原始背景顏色作為備用 */
+    background-size: cover;
+    background-position: center center; /* 置中圖片 */
+    background-repeat: no-repeat;
+    height: 100vh; /* 保證 body 高度充滿視窗 */
+    color: #afbcff;
+    font-family: "MyCustomFont", sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    background-image: url('../login_bg.jpg');
+    background-color: #000000; /* 保留原始背景顏色作為備用 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#marqueeContainer {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #000;
+    color: yellow;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative; /* 容器相對定位 */
+    border-radius: 5px;
+    display: none; /* 初始隱藏 */
+}
+
+#marqueeText {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直置中 */
+    white-space: nowrap; /* 防止文字換行 */
+    left: 100%; /* 初始位置在容器外右側 */
+}
+
+
+#lineButton {
+    display: block;
+    width: 100%;
+    background-color: #627CFC;
+    border: none;
+    border-radius: 0;
+    color: #000;
+    font-weight: bold;
+    cursor: default;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #111;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #627CFC;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-family: "MyCustomFont", sans-serif;
+}
+
+button:hover {
+    background-color: #505BFC;
+}
+
+.warning {
+    color: rgb(157, 0, 0);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#progressContainer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#progressBar {
+    width: 0;
+    height: 20px;
+    background-color: #627CFC;
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #627CFC;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+#codeBox {
+    display: none;
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    margin: 20px auto; /* 上下間距 20px，左右置中 */
+    border-radius: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family: monospace;
+    text-align: left;
+    height: 400px;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    input[type="text"], select {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    #codeBox {
+        height: 200px;
+        font-size: 0.85em;
+    }
+}
